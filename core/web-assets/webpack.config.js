@@ -13,7 +13,7 @@ var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlug
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StringReplacePlugin = require('string-replace-webpack-plugin');
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var TerserPlugin = require("terser-webpack-plugin");
 var createVariants = require('parallel-webpack').createVariants;
 var clonedeep = require('lodash.clonedeep');
 
@@ -259,7 +259,9 @@ var config = {
         test: require.resolve('bootstrap/dist/js/bootstrap'),
         use: [{
           loader: 'imports-loader',
-          options: 'define=>false'
+          options: {
+            additionalCode: 'var define = false; /* Disable AMD for misbehaving libraries */',
+          },
         }]
       },
       {
@@ -302,14 +304,18 @@ var config = {
         test: require.resolve('jquery-ui-treemap'),
         use: [{
           loader: 'imports-loader',
-          options: 'define=>false'
+          options: {
+            additionalCode: 'var define = false; /* Disable AMD for misbehaving libraries */',
+          },
         }]
       },
       {
         test: require.resolve('jquery-sparkline/dist/jquery.sparkline'),
         use: [{
           loader: 'imports-loader',
-          options: 'define=>false'
+          options: {
+            additionalCode: 'var define = false; /* Disable AMD for misbehaving libraries */',
+          },
         }]
       },
       {
@@ -530,11 +536,11 @@ function createConfig(options) {
     } else {
       console.log('minimizer exists:',myconf.optimization.minimizer);
     }
-    myconf.optimization.minimizer.push(new UglifyJsPlugin({
+    myconf.optimization.minimizer.push(new TerserPlugin({
       cache: true,
       parallel: true,
       sourceMap: true,
-      uglifyOptions: {
+      terserOptions: {
         mangle: {
           reserved: [ '$element', '$super', '$scope', '$uib', '$', 'jQuery', 'exports', 'require', 'angular', 'c3', 'd3' ]
         },
@@ -555,11 +561,13 @@ function createConfig(options) {
   myconf.output.filename = getFile('[name]', options);
   myconf.output.chunkFilename = getFile('[name]', options);
 
-  myconf.plugins.push(new CopyWebpackPlugin([
-    {
-      from: staticroot
-    }
-  ]));
+  myconf.plugins.push(new CopyWebpackPlugin({
+    patterns: [
+      {
+        from: staticroot
+      }
+    ]
+  }));
 
   console.log('Building variant: production=' + options.production);
   //console.log(myconf);
@@ -567,7 +575,7 @@ function createConfig(options) {
   const smp = new SpeedMeasurePlugin({
     outputTarget: 'target/smp-' + (options.production === 'vaadin' ? 'vaadin' : myconf.mode) + '.log'
   });
-  
+
   return smp.wrap( myconf );
 }
 
