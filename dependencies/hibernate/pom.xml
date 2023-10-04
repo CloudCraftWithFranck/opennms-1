@@ -15,7 +15,7 @@
     can depend on to use the hibernate library.
   </description>
   <properties>
-    <hibernateVersion>3.6.10.Final</hibernateVersion> 
+    <hibernateVersion>5.1.17.Final</hibernateVersion> 
   </properties>
   <dependencies>
     <dependency>
