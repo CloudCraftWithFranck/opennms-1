@@ -1001,7 +1001,7 @@
                   </goals>
                 </pluginExecutionFilter>
                 <action>
-                  <ignore></ignore>
+                  <ignore/>
                 </action>
               </pluginExecution>
               <pluginExecution>
@@ -1014,7 +1014,7 @@
                   </goals>
                 </pluginExecutionFilter>
                 <action>
-                    <execute></execute>
+                    <execute/>
                 </action>
               </pluginExecution>
               <pluginExecution>
@@ -1255,8 +1255,8 @@
             <phase>validate</phase>
             <configuration>
               <target>
-                <property name="opennms.build.basedir" location="." />
-                <echo message="base directory is ${opennms.build.basedir}" />
+                <property name="opennms.build.basedir" location="."/>
+                <echo message="base directory is ${opennms.build.basedir}"/>
               </target>
             </configuration>
             <goals>
@@ -1723,7 +1723,7 @@
     <jsonlibBundleVersion>2.4_1</jsonlibBundleVersion>
     <junitVintageEngineVersion>5.6.2</junitVintageEngineVersion>
     <karafVersion>4.3.6</karafVersion>
-    <kafkaBundleVersion>3.0.0_1</kafkaBundleVersion>
+    <kafkaBundleVersion>3.7.0_1</kafkaBundleVersion>
     <kafkaVersion>3.0.0</kafkaVersion>
     <liquibaseVersion>3.6.3</liquibaseVersion>
     <lmaxDisruptorVersion>3.3.2</lmaxDisruptorVersion>
@@ -1763,7 +1763,7 @@
     <rateLimitedLoggerVersion>2.0.1</rateLimitedLoggerVersion>
     <resilience4jVersion>0.17.0</resilience4jVersion>
     <rocksdbjniVersion>6.19.3</rocksdbjniVersion>
-    <scalaLibraryVersion>2.13.7</scalaLibraryVersion>
+    <scalaLibraryVersion>2.13.9</scalaLibraryVersion>
     <scalaLoggingVersion>3.9.4</scalaLoggingVersion>
     <scalaVersion>2.13</scalaVersion>
     <servicemixSpecsVersion>2.9.0</servicemixSpecsVersion>
