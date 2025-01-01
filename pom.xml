@@ -1001,7 +1001,7 @@
                   </goals>
                 </pluginExecutionFilter>
                 <action>
-                  <ignore></ignore>
+                  <ignore/>
                 </action>
               </pluginExecution>
               <pluginExecution>
@@ -1014,7 +1014,7 @@
                   </goals>
                 </pluginExecutionFilter>
                 <action>
-                    <execute></execute>
+                    <execute/>
                 </action>
               </pluginExecution>
               <pluginExecution>
@@ -1255,8 +1255,8 @@
             <phase>validate</phase>
             <configuration>
               <target>
-                <property name="opennms.build.basedir" location="." />
-                <echo message="base directory is ${opennms.build.basedir}" />
+                <property name="opennms.build.basedir" location="."/>
+                <echo message="base directory is ${opennms.build.basedir}"/>
               </target>
             </configuration>
             <goals>
@@ -1797,7 +1797,7 @@
     <!-- ALWAYS change aspectj to match the version referenced in the spring poms -->
     <aspectjVersion>1.8.6</aspectjVersion>
     <springWebFlowVersion>2.3.4.RELEASE</springWebFlowVersion>
-    <springSecurityVersion>3.2.7.RELEASE</springSecurityVersion>
+    <springSecurityVersion>3.2.10.RELEASE</springSecurityVersion>
     <springLdapVersion>${springSecurityVersion}</springLdapVersion>
     <springSecurityKerberosVersion>1.0.1.RELEASE</springSecurityKerberosVersion>
 
