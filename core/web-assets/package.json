@@ -74,7 +74,7 @@
         "yargs": "^14.2.3"
     },
     "dependencies": {
-        "@babel/runtime-corejs3": "^7.16.5",
+        "@babel/runtime-corejs3": "^7.26.0",
         "angular": "~1.5.11",
         "angular-animate": "~1.5.11",
         "angular-bootstrap-checkbox": "^0.5.0",
