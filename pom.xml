@@ -1001,7 +1001,7 @@
                   </goals>
                 </pluginExecutionFilter>
                 <action>
-                  <ignore></ignore>
+                  <ignore/>
                 </action>
               </pluginExecution>
               <pluginExecution>
@@ -1014,7 +1014,7 @@
                   </goals>
                 </pluginExecutionFilter>
                 <action>
-                    <execute></execute>
+                    <execute/>
                 </action>
               </pluginExecution>
               <pluginExecution>
@@ -1255,8 +1255,8 @@
             <phase>validate</phase>
             <configuration>
               <target>
-                <property name="opennms.build.basedir" location="." />
-                <echo message="base directory is ${opennms.build.basedir}" />
+                <property name="opennms.build.basedir" location="."/>
+                <echo message="base directory is ${opennms.build.basedir}"/>
               </target>
             </configuration>
             <goals>
@@ -1772,7 +1772,7 @@
     <smackVersion>4.0.6</smackVersion>
     <snappyJavaVersion>1.1.8.1</snappyJavaVersion>
     <snmp4jVersion>2.5.5</snmp4jVersion>
-    <snmp4jagentVersion>2.5.3</snmp4jagentVersion>
+    <snmp4jagentVersion>2.7.9</snmp4jagentVersion>
     <sonarVersion>3.7.0.1746</sonarVersion>
     <spockVersion>1.1-groovy-2.4</spockVersion>
     <swaggerUIVersion>3.13.0</swaggerUIVersion>
