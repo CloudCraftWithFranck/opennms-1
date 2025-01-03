@@ -1001,7 +1001,7 @@
                   </goals>
                 </pluginExecutionFilter>
                 <action>
-                  <ignore></ignore>
+                  <ignore/>
                 </action>
               </pluginExecution>
               <pluginExecution>
@@ -1014,7 +1014,7 @@
                   </goals>
                 </pluginExecutionFilter>
                 <action>
-                    <execute></execute>
+                    <execute/>
                 </action>
               </pluginExecution>
               <pluginExecution>
@@ -1255,8 +1255,8 @@
             <phase>validate</phase>
             <configuration>
               <target>
-                <property name="opennms.build.basedir" location="." />
-                <echo message="base directory is ${opennms.build.basedir}" />
+                <property name="opennms.build.basedir" location="."/>
+                <echo message="base directory is ${opennms.build.basedir}"/>
               </target>
             </configuration>
             <goals>
@@ -4147,7 +4147,7 @@
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-validator-annotation-processor</artifactId>
-        <version>4.1.0.Final</version>
+        <version>4.3.2.Final</version>
       </dependency>
       <dependency>
         <groupId>javax.samples.jnlp</groupId>
