@@ -1001,7 +1001,7 @@
                   </goals>
                 </pluginExecutionFilter>
                 <action>
-                  <ignore></ignore>
+                  <ignore/>
                 </action>
               </pluginExecution>
               <pluginExecution>
@@ -1014,7 +1014,7 @@
                   </goals>
                 </pluginExecutionFilter>
                 <action>
-                    <execute></execute>
+                    <execute/>
                 </action>
               </pluginExecution>
               <pluginExecution>
@@ -1255,8 +1255,8 @@
             <phase>validate</phase>
             <configuration>
               <target>
-                <property name="opennms.build.basedir" location="." />
-                <echo message="base directory is ${opennms.build.basedir}" />
+                <property name="opennms.build.basedir" location="."/>
+                <echo message="base directory is ${opennms.build.basedir}"/>
               </target>
             </configuration>
             <goals>
@@ -1676,7 +1676,7 @@
     <freemarkerVersion>2.3.23</freemarkerVersion>
     <fstVersion>2.47</fstVersion>
     <geohashVersion>1.4.0</geohashVersion>
-    <geoipVersion>2.15.0</geoipVersion>
+    <geoipVersion>2.17.0</geoipVersion>
     <geronimoVersion>1.1.1</geronimoVersion>
     <groovyVersion>2.4.5</groovyVersion>
     <grpcVersion>1.30.0</grpcVersion>
